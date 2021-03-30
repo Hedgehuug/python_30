@@ -56,4 +56,5 @@ def get_negative3(item):
         return False
 
 print(list(filter(get_negative3,negative_range)))
+#Output: [-9, -6, -3]
 
