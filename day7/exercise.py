@@ -95,11 +95,36 @@ print(list(filter(lambda num: num%3==0 and num<0,range(-10,11))))
 """
 Reduce exercises:
 
-
 Create a function that multiplies a sequence of
 numbers.
 """
-
 sequence_list = [6,12,6,8,2]
 
-print(list(reduce(lambda num_1,num_2:num_1*num_2,sequence_list)))
+print(reduce(lambda num_1,num_2:num_1*num_2,sequence_list))
+
+"""
+Create a function that takes a list of
+strings and return the sum of its characters.
+["I", "am", "esteban"] => 1 2 and 7
+10
+"""
+
+string_list = ['I','am','esteban','from','earth']
+lambda_reduce = reduce(lambda word_1,word_2: len(word_1)+len(word_2) if isinstance(word_1,str) else word_1+len(word_2),string_list)
+print(lambda_reduce)
+#Output: 19
+#This was really not easy
+
+"""
+This challenge can be a bit complicated, however
+remember that in the functions you can perform
+conditionals, take a list of numbers and return
+the largest number.
+"""
+list_of_numbers = [
+    2,71,9,5,24,
+    63,34,9,23,2,
+    6,22,3,7,45
+]
+
+print(reduce(lambda num_1,num_2: num_1 if num_1>num_2 else num_2,list_of_numbers))
