@@ -59,4 +59,8 @@ instance = StaticClass()
 # 50
 
 
+#So the usefulness of these methods is to separate logic that needs and logic that doesn't need the instance
+#Good practice to separate these things
+
+
 
