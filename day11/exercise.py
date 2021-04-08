@@ -38,7 +38,6 @@ class Pizza:
         self.size = self._pizza_size(price)
     
     # So this is a wonderful use of classmethod, to create a function for initiating a class from within the class
-    # 
     @classmethod
     def chicken(cls, price):
         ingredients = ["cheese", "chicken", "mushroom"]
