@@ -81,3 +81,7 @@ print(italian_pizza<chicken_pizza)
 print(italian_pizza>chicken_pizza)
 difference = chicken_pizza-italian_pizza
 print(difference)
+# Output:
+# False
+# True
+# -12
