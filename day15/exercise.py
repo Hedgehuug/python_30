@@ -29,7 +29,8 @@ the user guess it, lose after 3 attempts.
 # Tomorrow I should look at ways to make random number generators
 
 # This number is gonna be random later
-number = 6
+import random
+number = random.randint(1,11)
 attempts = 0
 while attempts < 3:
     answer = int(input('Guess a number between 1-10:'))
@@ -42,7 +43,7 @@ while attempts < 3:
         print(f'You guessed the number, it was: {number}. Congratulations!')
         break
 else:
-    print('you have run out of guesses, sorry')
+    print(f'you have run out of guesses, sorry. The answer is: {number}')
 
 
 
