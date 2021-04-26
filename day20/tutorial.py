@@ -28,6 +28,7 @@ class ContextManager:
     def __enter__(self):
         return self.file
 
+    # ----- FOR SOME REASON HAVING 4 PROPERTIES IS MANDATORY FOR __EXIT__
     def __exit__(self, type, value, traceback):
         self.file.close()
 
@@ -39,9 +40,25 @@ with ContextManager('info.txt') as file:
 
 
 # Context managers with Functions:
-import contextlib as contextmanager
+# We need to import contextmanager from contextlib to use a func()
+from contextlib import contextmanager
 
 # To get it working with functions, we need to use decorators to decorate functions
 @contextmanager
+def open_file(filename):
+    file = open(filename)
+    try:
+        # Another thing about using it with functions is the necessity for Yield
+        yield file
+    except:
+        # Exceptions that may occur
+        pass
+    finally:
+        file.close()
+
+with open_file('info.txt') as file:
+    content = file.read()
+
+print(content)
 
 
