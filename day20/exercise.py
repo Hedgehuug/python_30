@@ -36,5 +36,5 @@ types of context managers you can create, try one to
 
 import contextlib
 
-
+# I never finished this exercise, but I found out that to find out more about a module, you can use help()
 help(contextlib)
