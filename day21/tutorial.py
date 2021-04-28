@@ -144,3 +144,4 @@ format = '%Y-%m-%d %H:%M'
 obj_date = datetimes.strptime(str_date,format)
 
 print(obj_date)
+# Output: 2021-05-13 16:20:00
