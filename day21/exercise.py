@@ -90,5 +90,6 @@ for i in range(days_since_start+1):
             months_mondays.append(working_date.strftime(date_format))
     
 print(months_mondays)
-
+# Output:
+# ['2021-04-05', '2021-04-12', '2021-04-19', '2021-04-26']
 
